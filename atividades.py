@@ -32,9 +32,24 @@ try:
 except ValueError:
        print("Erro: Por favor insira apenas numeros validos ")
 
+#Calculadora de preço
+
+def calcular_valor_compra(valor, quantidade):
+    valor = valor * quantidade
+    return valor
 
 
+try:
+    valor = float(input("Digite o valor do produto"))
+    quantidade = float(input("Digite a quantidade"))
+    
 
+    valor = calcular_valor_compra(valor, quantidade)
+
+    print(f"O volume da compra é: {valor:}.") 
+
+except ValueError:
+       print("Erro: Por favor insira apenas numeros validos ")
      
 
 
