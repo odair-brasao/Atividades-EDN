@@ -3,7 +3,7 @@
 print("Alo Mundo")
 
 
-# calculadora de soma 
+# Calculadora de soma 
 
 numero1 = 12
 numero2 = 14
@@ -13,7 +13,7 @@ soma = numero1 + numero2
 print(soma)
 
 
-#calculadora de volume
+#Calculadora de volume
 
 def calcular_volume_caixa(comprimento, largura, altura):
     volume = comprimento * largura * altura
@@ -46,10 +46,43 @@ try:
 
     valor = calcular_valor_compra(valor, quantidade)
 
-    print(f"O volume da compra é: {valor:}.") 
+    print(f"O volume da compra é: {valor:.2f}:") 
 
 except ValueError:
        print("Erro: Por favor insira apenas numeros validos ")
+
+
+       #Convesor de Moeda
+      
+def converso_moedas(valor_reais, taxa_dolar, taxa_euro):
+    valordolar = valor_reais / taxa_dolar
+    valoreuro = valor_reais / taxa_euro
+    return (valordolar , valoreuro)
+
+     
+try:
+    valor_reais = float(input("Digite o valor em reais: "))
+    taxa_dolar = 5.20
+    taxa_euro = 6.15
+
+    valordolar = valor_reais / taxa_dolar
+    valoreuro = valor_reais / taxa_euro
+
+
+    print(f"Valor investido em reais {valor_reais:.2f}:")
+    print(f"Valor convertido dolar{valordolar:.2f}:")
+    print(f"Valor convertido euro{valoreuro:.2f}:")
+
+except ValueError:
+     
+     print("Erro: Por favor insira um valor valido.")
+
+
+
+          
+
+
+
      
 
 
